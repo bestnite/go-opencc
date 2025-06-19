@@ -14,7 +14,7 @@ Go wrapper for OpenCC (Open Chinese Convert) using WebAssembly, enabling Chinese
 ## Installation
 
 ```bash
-go get github.com/your-username/go-opencc
+go get github.com/bestnite/go-opencc
 ```
 
 ## Prerequisites
@@ -30,7 +30,7 @@ To build the WebAssembly module, you need:
 1. Clone the repository with submodules:
 
 ```bash
-git clone --recursive https://github.com/your-username/go-opencc.git
+git clone --recursive https://github.com/bestnite/go-opencc.git
 cd go-opencc
 ```
 
@@ -57,7 +57,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/your-username/go-opencc"
+    "github.com/bestnite/go-opencc"
 )
 
 func main() {
@@ -88,7 +88,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/your-username/go-opencc"
+    "github.com/bestnite/go-opencc"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module go-opencc
+module github.com/bestnite/go-opencc
 
 go 1.22.0
 

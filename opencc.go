@@ -2,8 +2,10 @@ package opencc
 
 import (
 	"context"
+	"embed"
 	_ "embed"
 	"fmt"
+	"io/fs"
 	"os"
 	"sync"
 
@@ -16,6 +18,9 @@ import (
 
 //go:embed opencc.wasm
 var binary []byte // WASM blob
+
+//go:embed data/*
+var dataFS embed.FS
 
 var ErrInvalidConverter = fmt.Errorf("invalid converter")
 var ErrConversionFailed = fmt.Errorf("conversion failed")
@@ -234,9 +239,15 @@ func newModule() (*module, error) {
 		}
 	}
 
-	// Configure module with file system access - mount data directory as root
+	// Configure module with embedded file system access
+	// Create a sub-filesystem from the embedded data directory
+	dataSubFS, err := fs.Sub(dataFS, "data")
+	if err != nil {
+		return nil, fmt.Errorf("create data sub-filesystem: %w", err)
+	}
+
 	config := wazero.NewModuleConfig().
-		WithFS(os.DirFS("data")). // Mount data directory as root
+		WithFS(dataSubFS). // Mount embedded data directory as root
 		WithArgs("opencc").
 		WithName("opencc").
 		WithStdout(os.Stdout).

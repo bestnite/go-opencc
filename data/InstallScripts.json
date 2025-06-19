@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/nite/dev/go-opencc/build/cmake_install.cmake",
+		"/home/nite/dev/go-opencc/build/opencc/cmake_install.cmake",
+		"/home/nite/dev/go-opencc/build/opencc/deps/marisa-0.2.6/cmake_install.cmake",
+		"/home/nite/dev/go-opencc/build/opencc/src/cmake_install.cmake",
+		"/home/nite/dev/go-opencc/build/opencc/src/tools/cmake_install.cmake",
+		"/home/nite/dev/go-opencc/build/opencc/doc/cmake_install.cmake",
+		"/home/nite/dev/go-opencc/build/opencc/data/cmake_install.cmake",
+		"/home/nite/dev/go-opencc/build/opencc/test/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

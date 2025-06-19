@@ -1,0 +1,38 @@
+# Build outputs
+build/
+*.o
+*.a
+*.so
+*.dll
+
+# Go specific
+*.sum
+vendor/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# WASI SDK
+wasi-sdk*/ 
+
+.cache/data/
